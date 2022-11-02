@@ -2,7 +2,7 @@
 
 # School Library
 
-> This is an Educational project for the Microverse Module 3 Block 4(Ruby) School library exercise, requirement for the Ruby Module
+> This is an Educational project for the Microverse Module 3 Block 4(Ruby) School library exercise, requirement for the Ruby Module.
 
 ## Built With
 

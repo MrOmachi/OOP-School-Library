@@ -11,7 +11,7 @@
 ## Pre-requisites
 
 - You need to have Ruby installed on your local machine
-- Ruby bundler properly set up for installing dependencies
+- Ruby bundler properly set up for installing dependencies.
 
   > **Go here to get Ruby installer for windows** > [Windows Installer](https://rubyinstaller.org/)
 

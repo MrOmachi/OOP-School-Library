@@ -1,6 +1,7 @@
 require_relative './student'
 require_relative './teacher'
 require_relative './classroom'
+require_relative './book'
 
 class App
   attr_accessor :book, :people, :rentals
@@ -19,7 +20,7 @@ class App
     puts @people
   end
 
-  # Creating a student or teacher
+  # Creating a student or teacher and listing them
   def create_a_person
     puts 'Do you want to create a teacher or a student'
     puts
@@ -91,6 +92,21 @@ class App
     end
   end
 
-  #Creating books
-  
+  # Creating books and listing them
+  def display_all_books
+    puts @books
+  end
+
+  def create_a_book
+    puts 'Book Author'
+    author = gets.chomp
+
+    puts 'Book Title'
+    title = gets.chomp
+
+    new_book = Book.new(title, author)
+    @books.push(new_book)
+
+    puts "Book #{title} written by #{author} was created"
+  end
 end

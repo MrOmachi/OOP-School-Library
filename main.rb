@@ -30,9 +30,9 @@ def choose_action(selected_option)
   when 4
     create_a_book
   when 5
-   puts 'create_a_rental'
+    create_a_rental
   when 6
-   puts 'list_all_rentals'
+    list_all_rentals
   when 7
     puts 'Exiting app ...'
     exit

@@ -33,12 +33,10 @@ def choose_action(selected_option)
     create_a_rental
   when 6
     list_all_rentals
-  when 7
-    puts 'Exiting app ...'
-    exit
   else
     puts 'Invalid option selected'
-    options
+    puts 'Exiting app ...'
+    exit
   end
 end
 

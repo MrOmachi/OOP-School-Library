@@ -25,7 +25,9 @@ class App
     else
       puts "people list (#{@people.count})"
 
-      @people.each_with_index { |person, index| puts "#{index + 1} type: #{person.type} person name: #{person.name}, person id: #{person.id}"}
+      @people.each_with_index do |person, index|
+        puts "#{index + 1} type: #{person.type} person name: #{person.name}, person id: #{person.id}"
+      end
     end
   end
 
@@ -111,7 +113,9 @@ class App
       run
     else
       puts "book lists count (#{@books.count})"
-      @books.each_with_index { |book, index| puts "#{index + 1} book title is: #{book.title} written by: #{book.author}" }
+      @books.each_with_index do |book, index|
+        puts "#{index + 1} book title is: #{book.title} written by: #{book.author}"
+      end
     end
   end
 
@@ -134,7 +138,7 @@ class App
 
     person_id = gets.chomp.to_i
 
-    if !@people.find { |person| person.id == person_id}
+    if !@people.find { |person| person.id == person_id }
       puts 'No rentals found'
     elsif @rentals.empty?
       puts 'Empty Rental list'

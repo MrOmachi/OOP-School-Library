@@ -1,4 +1,5 @@
 require_relative './app'
+require './choose_action'
 
 def options
   puts 'Welcome to School Library App!'

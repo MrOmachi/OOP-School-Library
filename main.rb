@@ -6,8 +6,8 @@ def options
   puts 'Please choose an option by entrying a number:'
 
   select_option = [
-    '1 - List all books',
-    '2 - List all people',
+    '1 - List all people',
+    '2 - List all books',
     '3 - Create a person',
     '4 - Create a book',
     '5 - Create a rental',

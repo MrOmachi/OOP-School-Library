@@ -12,5 +12,12 @@
     "age": "a",
     "classroom": 32,
     "id": 13
+  },
+  {
+    "name": "Lionel",
+    "type": "Student",
+    "age": "a",
+    "classroom": 26,
+    "id": 38
   }
 ]

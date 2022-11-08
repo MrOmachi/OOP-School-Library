@@ -1,16 +1,22 @@
+require 'json'
+require './database'
+require './read_database'
 require_relative './student'
 require_relative './teacher'
 require_relative './classroom'
 require_relative './book'
 require_relative './rental'
 
-class App
+class App # rubocop:disable Metrics/ClassLength
   attr_accessor :book, :people, :rentals
 
+  include Database
+  include ReadDatabase
+
   def initialize
-    @books = []
-    @people = []
-    @rentals = []
+    @books = read_book
+    @people = read_person
+    @rentals = read_rentals
   end
 
   def run
@@ -26,7 +32,7 @@ class App
       puts "people list (#{@people.count})"
 
       @people.each_with_index do |person, index|
-        puts "#{index + 1} Person type: #{person.type} person name: #{person.name}, person id: #{person.id}"
+        puts "#{index + 1} Person type: #{person['type']} person name: #{person['name']}, person id: #{person['id']}"
       end
     end
   end
@@ -59,14 +65,18 @@ class App
 
     puts 'Name'
     name = gets.chomp
-
     has_permission = permit?
 
     new_student = Student.new(classroom, age, name: name, parent_permission: has_permission)
-    @people << new_student unless @books.include?(new_student)
+    @people << {
+      name: new_student.name,
+      type: new_student.type,
+      age: new_student.age,
+      classroom: new_student.classroom,
+      id: new_student.id
+    }
 
-    puts new_student
-
+    write_person(@people)
     puts "Student #{name} with age #{age} and classroom #{classroom.upcase}, was created"
 
     action_prompt
@@ -83,10 +93,14 @@ class App
     name = gets.chomp
 
     new_teacher = Teacher.new(specialization, age, name: name)
-    @people << new_teacher unless @books.include?(new_teacher)
-
+    @people << {
+      name: new_teacher.name,
+      type: new_teacher.type,
+      age: new_teacher.age,
+      id: new_teacher.id
+    }
+    write_person(@people)
     puts "Teacher #{name} with age #{age} and specialized in #{specialization}, was created"
-
     action_prompt
   end
 
@@ -114,7 +128,7 @@ class App
     else
       puts "book lists count (#{@books.count})"
       @books.each_with_index do |book, index|
-        puts "#{index + 1} book title is: #{book.title} written by: #{book.author}"
+        puts "#{index + 1} book title is: #{book['title']} written by: #{book['author']}"
       end
     end
   end
@@ -127,7 +141,11 @@ class App
     title = gets.chomp
 
     new_book = Book.new(title, author)
-    @books.push(new_book)
+    @books << {
+      title: new_book.title,
+      author: new_book.author
+    }
+    write_book(@books)
     puts "Book #{title} written by #{author} was created"
     action_prompt
   end
@@ -138,15 +156,15 @@ class App
 
     person_id = gets.chomp.to_i
 
-    if !@people.find { |person| person.id == person_id }
+    if !@people.find { |person| person['id'] == person_id }
       puts 'No rentals found'
     elsif @rentals.empty?
       puts 'Empty Rental list'
     else
       puts "Rentals count(#{@people.count})"
-      @rentals.select do |rental|
-        if rental.person.id == person_id
-          puts "Date: #{rental.date}, Book: '#{rental.book.title}' by #{rental.book.author}"
+      @rentals.each do |rental|
+        if rental['index'] == person_id
+          puts "Date: #{rental['date']}, Book: '#{rental['books']}' by #{rental.books.author}"
         end
       end
     end
@@ -167,8 +185,12 @@ class App
     date = gets.chomp
 
     new_rental = Rental.new(date, @people[person_index], @books[book_index])
-    @rentals << new_rental unless @rentals.include?(new_rental)
-
+    @rentals << {
+      date: new_rental.date,
+      index: new_rental.person['id'],
+      books: new_rental.book['id']
+    }
+    write_rental(@rentals)
     puts 'Rentals created successfully !'
     run
   end

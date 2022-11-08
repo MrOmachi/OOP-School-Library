@@ -34,6 +34,8 @@ class App # rubocop:disable Metrics/ClassLength
       @people.each_with_index do |person, index|
         puts "#{index + 1} Person type: #{person['type']} person name: #{person['name']}, person id: #{person['id']}"
       end
+      puts ''
+      run
     end
   end
 

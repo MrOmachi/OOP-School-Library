@@ -4,19 +4,19 @@
     "type": "Student",
     "age": "a",
     "classroom": 32,
-    "id": 23
+    "id": 2
   },
   {
     "name": "erik",
     "type": "Teacher",
     "age": "teacher",
-    "id": 46
+    "id": 1
   },
   {
     "name": "Omachi",
     "type": "Teacher",
     "age": "teacher",
-    "id": 2
+    "id": 3
   },
   {
     "name": "Erik",

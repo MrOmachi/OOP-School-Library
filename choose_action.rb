@@ -2,8 +2,10 @@ def choose_action(selected_option)
   case selected_option
   when 1
     display_all_people
+    run
   when 2
     display_all_books
+    run
   when 3
     create_a_person
   when 4

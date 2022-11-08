@@ -34,6 +34,7 @@ class App # rubocop:disable Metrics/ClassLength
       @people.each_with_index do |person, index|
         puts "#{index + 1} Person type: #{person['type']} person name: #{person['name']}, person id: #{person['id']}"
       end
+      puts ''
     end
   end
 
@@ -188,8 +189,7 @@ class App # rubocop:disable Metrics/ClassLength
     @rentals << {
       date: new_rental.date,
       index: new_rental.person['id'],
-      title: new_rental.book['title'],
-      author: new_rental.book['author']
+      books: new_rental.book['id']
     }
     write_rental(@rentals)
     puts 'Rentals created successfully !'

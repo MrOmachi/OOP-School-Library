@@ -5,5 +5,31 @@
     "age": "a",
     "classroom": 32,
     "id": 23
+  },
+  {
+    "name": "erik",
+    "type": "Teacher",
+    "age": "teacher",
+    "id": 46
+  },
+  {
+    "name": "Omachi",
+    "type": "Teacher",
+    "age": "teacher",
+    "id": 2
+  },
+  {
+    "name": "Erik",
+    "type": "Student",
+    "age": "A",
+    "classroom": 23,
+    "id": 4
+  },
+  {
+    "name": "Omachi",
+    "type": "Student",
+    "age": "B",
+    "classroom": 25,
+    "id": 40
   }
 ]

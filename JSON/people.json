@@ -1,0 +1,23 @@
+[
+  {
+    "name": "rsfd",
+    "type": "Student",
+    "age": "a",
+    "classroom": 43,
+    "id": 25
+  },
+  {
+    "name": "Erik",
+    "type": "Student",
+    "age": "a",
+    "classroom": 32,
+    "id": 13
+  },
+  {
+    "name": "Lionel",
+    "type": "Student",
+    "age": "a",
+    "classroom": 26,
+    "id": 38
+  }
+]

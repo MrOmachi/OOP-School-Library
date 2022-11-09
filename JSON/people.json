@@ -58,5 +58,12 @@
     "type": "Teacher",
     "age": "Doctor",
     "id": 44
+  },
+  {
+    "name": "Oscar",
+    "type": "Student",
+    "age": "B",
+    "classroom": 12,
+    "id": 45
   }
 ]

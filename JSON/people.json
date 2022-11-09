@@ -33,5 +33,30 @@
     "age": "A",
     "classroom": 19,
     "id": 26
+  },
+  {
+    "name": "erik",
+    "type": "Student",
+    "age": "A",
+    "classroom": 24,
+    "id": 20
+  },
+  {
+    "name": "Gerardo",
+    "type": "Teacher",
+    "age": "Mathematics",
+    "id": 20
+  },
+  {
+    "name": "Erik",
+    "type": "Teacher",
+    "age": "Doctor",
+    "id": 17
+  },
+  {
+    "name": "Luis",
+    "type": "Teacher",
+    "age": "Doctor",
+    "id": 44
   }
 ]

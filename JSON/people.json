@@ -19,5 +19,19 @@
     "age": "a",
     "classroom": 26,
     "id": 38
+  },
+  {
+    "name": "Lorena",
+    "type": "Student",
+    "age": "A",
+    "classroom": 190,
+    "id": 47
+  },
+  {
+    "name": "Lorena Sanchez",
+    "type": "Student",
+    "age": "A",
+    "classroom": 19,
+    "id": 26
   }
 ]

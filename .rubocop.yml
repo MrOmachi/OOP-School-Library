@@ -3,6 +3,7 @@ AllCops:
   Exclude:
     - "Guardfile"
     - "Rakefile"
+    - "bin/**/*"
     - "node_modules/**/*"
 
   DisplayCopNames: true

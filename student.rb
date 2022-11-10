@@ -11,7 +11,8 @@ class Student < Person
 
   def classroom=(classes)
     @classroom = classes
-    classes.students.push(self) unless classes.students.include(self)
+    classes.students.push(self)
+    # unless classes.students.include(self)
   end
 
   def play_hookey

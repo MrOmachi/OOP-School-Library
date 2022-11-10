@@ -19,5 +19,58 @@
     "age": "a",
     "classroom": 26,
     "id": 38
+  },
+  {
+    "name": "Lorena",
+    "type": "Student",
+    "age": "A",
+    "classroom": 190,
+    "id": 47
+  },
+  {
+    "name": "Lorena Sanchez",
+    "type": "Student",
+    "age": "A",
+    "classroom": 19,
+    "id": 26
+  },
+  {
+    "name": "erik",
+    "type": "Student",
+    "age": "A",
+    "classroom": 24,
+    "id": 20
+  },
+  {
+    "name": "Gerardo",
+    "type": "Teacher",
+    "age": "Mathematics",
+    "id": 20
+  },
+  {
+    "name": "Erik",
+    "type": "Teacher",
+    "age": "Doctor",
+    "id": 17
+  },
+  {
+    "name": "Luis",
+    "type": "Teacher",
+    "age": "Doctor",
+    "id": 44
+  },
+  {
+    "name": "Oscar",
+    "type": "Student",
+    "age": "B",
+    "classroom": 12,
+    "id": 45
+  },
+  {
+    "name": "22",
+    "type": "Student",
+    "age": "a",
+    "classroom": 22,
+    "id": 45
   }
 ]
